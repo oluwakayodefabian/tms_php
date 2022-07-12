@@ -6,12 +6,16 @@ if (empty($_SESSION['admin_id']) && empty($_SESSION['username']))
 $data = '';
 $errMsg = '';
 try {
-    $stmt1 = $connect->prepare('SELECT * FROM complaints WHERE complaint_id = :complaint_id');
-    $stmt1->execute(array(
-        ':complaint_id' => $_GET['cmp_id'],
-    ));
-    $data = $stmt1->fetch(PDO::FETCH_ASSOC);
-} catch (\PDOException $e) {
+    if ($_SESSION['role'] == 'agent') {
+        $stmt = $connect->prepare('SELECT * FROM complaints WHERE complaint_id = :complaint_id');
+        $stmt->execute([
+            ':complaint_id' => $_GET['cmp_id']
+        ]);
+        $data2 = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        $data = $data2;
+    }
+} catch (PDOException $e) {
     $errMsg = $e->getMessage();
 }
 
@@ -31,7 +35,9 @@ if (isset($_POST['response_btn'])) {
 
 ?>
 <?php include '../include/header.php'; ?>
+
 <?php require_once '../include/sideBar.php'; ?>
+
 <div id="content-wrapper" class="d-flex flex-column">
 
     <!-- Main Content -->
@@ -103,3 +109,6 @@ if (isset($_POST['response_btn'])) {
     <!-- End of Footer -->
 
 </div>
+
+
+<?php include '../include/footer.php'; ?>
