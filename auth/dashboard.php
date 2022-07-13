@@ -5,14 +5,12 @@ if (empty($_SESSION['username']))
 
 if ($_SESSION['role'] == 'agent') {
 	// Total number of tenants
-	// $stmt = $connect->prepare('SELECT count(*) as registered_tenants FROM tenants');
-	$stmt = $connect->prepare('SELECT count(*) as registered_tenants FROM properties WHERE admin_id=:admin_id');
-	$stmt->execute([':admin_id' => $_SESSION['admin_id']]);
+	$stmt = $connect->prepare('SELECT count(*) as registered_tenants FROM tenants WHERE agent_assigned_to=:agent_assigned_to');
+	$stmt->execute([':agent_assigned_to' => $_SESSION['admin_id']]);
 	$total_num_of_tenants = $stmt->fetch(PDO::FETCH_ASSOC);
 } elseif ($_SESSION['role'] == 'super_admin') {
 	// Total number of tenants
-	// $stmt = $connect->prepare('SELECT count(*) as registered_tenants FROM tenants');
-	$stmt = $connect->prepare('SELECT count(*) as registered_tenants FROM properties');
+	$stmt = $connect->prepare('SELECT count(*) as registered_tenants FROM tenants');
 	$stmt->execute();
 	$total_num_of_tenants = $stmt->fetch(PDO::FETCH_ASSOC);
 }

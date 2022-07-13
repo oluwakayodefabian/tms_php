@@ -72,7 +72,7 @@
 				<div class="col-md-4">
 					<div class="form-group">
 						<label for="image">Property Image</label>
-						<input type="file" name="image" id="image" class="form-control">
+						<input type="file" name="image" id="image" class="form-control" required>
 					</div>
 				</div>
 			</div>

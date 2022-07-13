@@ -23,30 +23,30 @@
                     <form action="" method="post">
                         <div class="form-group row">
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                                <label for="first_name">First name</label>
+                                <label for="first_name">First name<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter First name" value="<?= $first_name ?>" />
                             </div>
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                                <label for="last_name">Last name</label>
+                                <label for="last_name">Last name<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter Last name" value="<?= $last_name ?>" />
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                                <label for="admin_username">Username</label>
+                                <label for="admin_username">Username<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="admin_username" name="admin_username" placeholder="Enter username" value="<?= $username == '' ?  uniqid('username') : $username ?>" />
                                 <small id="usernameHelpBlock" class="form-text text-primary">
                                     The username above was generated automatically be the system. You can change it to a preferred username of your choice.
                                 </small>
                             </div>
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                                <label for="admin_email">Email</label>
+                                <label for="admin_email">Email<span class="text-danger">*</span></label>
                                 <input type="email" class="form-control form-control-user" id="admin_email" name="admin_email" placeholder="Email Address" value="" />
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                                <label for="current-password">Password</label>
+                                <label for="current-password">Password<span class="text-danger">*</span></label>
                                 <div id="current-pwd-container">
                                     <span id="toggle-pwd" title="see password"><i class="fas fa-eye fa-2x"></i></span>
                                     <input type="password" class="form-control form-control-user" id="current-password" placeholder="Enter Password" name="admin_password">
@@ -56,16 +56,15 @@
                                 </small>
                             </div>
                             <div class="col-sm-6">
-                                <label for="admin">Choose a role for the user</label>
+                                <label for="admin">Choose a role for the user<span class="text-danger">*</span></label>
                                 <select class="custom-select" id="role" name="role">
                                     <option value="agent">agent</option>
-                                    <option value="super-admin">super admin</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
                             <div>
-                                <label for="admin">Assign a property to this agent</label>
+                                <label for="admin">Assign a property to this agent <span class="text-danger">*</span></label>
                                 <select class="custom-select" id="property_id" name="property_id">
                                     <option value="">
                                         select a property

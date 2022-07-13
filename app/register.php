@@ -74,6 +74,26 @@ if (isset($_POST['register_properties'])) {
 		}
 	}
 }
+
+// try {
+// 	$stmt2 = $connect->prepare('SELECT * FROM properties');
+// 	$stmt2->execute();
+// 	$data2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+
+// 	foreach ($data2 as $property) {
+// 		if (is_null($property['admin_id'])) {
+// 			$stmt3 = $connect->prepare('UPDATE properties SET assigned_status=:assigned_status WHERE admin_id=:admin_id');
+// 			$stmt3->execute(array(
+// 				':admin_id' => NULL,
+// 				':assigned_status' => 'not_assigned'
+// 			));
+// 		}
+// 	}
+// 	$data = $data2;
+// } catch (\PDOException $e) {
+// 	echo $e->getMessage();
+// }
+
 ?>
 <?php include '../include/header.php'; ?>
 <?php include '../include/sideBar.php'; ?>

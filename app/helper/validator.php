@@ -21,6 +21,9 @@ function validateRegistration($post_data)
     if (empty($post_data['role'])) {
         array_push($errors, "You have to choose a role");
     }
+    if (empty($post_data['property_id'])) {
+        array_push($errors, "You have to assign the agent to a property");
+    }
     // Validate email
     if (!filter_var($post_data['admin_email'], FILTER_VALIDATE_EMAIL)) {
         array_push($errors, "Invalid Email");

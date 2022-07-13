@@ -14,9 +14,10 @@ if (isset($_GET['application_id'])) {
             $data2 = $stmt->fetch(PDO::FETCH_ASSOC);
             $data = $data2;
 
-            $stmt = $connect->prepare('INSERT INTO tenants (property_id, first_name, last_name, email, gender, state, lga, phone_no, amount_paid, unique_id) VALUES (:property_id, :first_name, :last_name, :email, :gender, :state, :lga, :phone_no, :amount_paid, :unique_id)');
+            $stmt = $connect->prepare('INSERT INTO tenants (property_id, agent_assigned_to, first_name, last_name, email, gender, state, lga, phone_no, amount_paid, unique_id) VALUES (:property_id, :agent_assigned_to, :first_name, :last_name, :email, :gender, :state, :lga, :phone_no, :amount_paid, :unique_id)');
             $stmt->execute(array(
                 ':property_id' => $data['property_id'],
+                ':agent_assigned_to' => $_SESSION['admin_id'],
                 ':first_name' => $data['first_name'],
                 ':last_name' => $data['last_name'],
                 ':email'    => $data['email'],
