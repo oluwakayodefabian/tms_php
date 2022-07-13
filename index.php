@@ -202,17 +202,17 @@ if (isset($_POST['contact-btn'])) {
               <div class="row">
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="first_name" placeholder="First Name*" name="first_name">
+                    <input type="text" class="form-control" id="first_name" placeholder="First Name*" name="first_name" required>
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="last_name" placeholder="Last Name*" name="last_name">
+                    <input type="text" class="form-control" id="last_name" placeholder="Last Name*" name="last_name" required>
                   </div>
                 </div>
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <input type="email" class="form-control" id="mail" placeholder="Email*" name="email">
+                    <input type="email" class="form-control" id="mail" placeholder="Email*" name="email" required>
                   </div>
                 </div>
                 <div class="col-12 row">
@@ -243,12 +243,12 @@ if (isset($_POST['contact-btn'])) {
                 </div>
                 <div class="col-sm-12 mt-3">
                   <div class="form-group">
-                    <input type="text" name="title" id="title" class="form-control" placeholder="Title of Message*">
+                    <input type="text" name="title" id="title" class="form-control" placeholder="Title of Message*" required>
                   </div>
                 </div>
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <textarea name="message" id="message" class="form-control" placeholder="Message*" rows="5"></textarea>
+                    <textarea name="message" id="message" class="form-control" placeholder="Message*" rows="5" required></textarea>
                   </div>
                 </div>
                 <div class="col-sm-12">

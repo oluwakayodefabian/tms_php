@@ -86,7 +86,7 @@
 				<div class="col-md-4">
 					<div class="form-group">
 						<label for="image">Assign the property to an agent</label>
-						<select name="agent_id" id="agent_id" class="form-control">
+						<select name="agent_id" id="agent_id" class="form-control" required>
 							<option value="">select an agent</option>
 							<?php foreach ($agents as $agent) : ?>
 								<option value="<?= $agent['admin_id'] ?>"><?= $agent['first_name'] . ' ' . $agent['last_name'] ?></option>
