@@ -56,26 +56,24 @@ if (isset($_POST['contact-btn'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Tenancy Management System</title>
-  <<<<<<< HEAD <link rel="stylesheet" href="assets/index/vendors/mdi/css/materialdesignicons.min.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="assets/index/vendors/owl.carousel/css/owl.carousel.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="assets/index/vendors/owl.carousel/css/owl.theme.default.min.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="assets/index/vendors/aos/css/aos.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="assets/index/vendors/jquery-flipster/css/jquery.flipster.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="assets/index/css/style.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="assets/alertify/alertify.min.css">
-    <link rel="stylesheet" href="assets/alertify/default.min.css">
-    <link rel="shortcut icon" href="assets/index/images/favicon.png" />
-    =======
-    <link rel="stylesheet" href="./assets/index/vendors/mdi/css/materialdesignicons.min.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="./assets/index/vendors/owl.carousel/css/owl.carousel.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="./assets/index/vendors/owl.carousel/css/owl.theme.default.min.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="./assets/index/vendors/aos/css/aos.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="./assets/index/vendors/jquery-flipster/css/jquery.flipster.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="./assets/index/css/style.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="./assets/alertify/alertify.min.css">
-    <link rel="stylesheet" href="./assets/alertify/default.min.css">
-    <link rel="shortcut icon" href="./assets/index/images/favicon.png" />
-    >>>>>>> 3567bee... updates were made
+  <link rel="stylesheet" href="assets/index/vendors/mdi/css/materialdesignicons.min.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="assets/index/vendors/owl.carousel/css/owl.carousel.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="assets/index/vendors/owl.carousel/css/owl.theme.default.min.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="assets/index/vendors/aos/css/aos.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="assets/index/vendors/jquery-flipster/css/jquery.flipster.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="assets/index/css/style.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="assets/alertify/alertify.min.css">
+  <link rel="stylesheet" href="assets/alertify/default.min.css">
+  <link rel="shortcut icon" href="assets/index/images/favicon.png" />
+  <link rel="stylesheet" href="./assets/index/vendors/mdi/css/materialdesignicons.min.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="./assets/index/vendors/owl.carousel/css/owl.carousel.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="./assets/index/vendors/owl.carousel/css/owl.theme.default.min.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="./assets/index/vendors/aos/css/aos.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="./assets/index/vendors/jquery-flipster/css/jquery.flipster.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="./assets/index/css/style.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="./assets/alertify/alertify.min.css">
+  <link rel="stylesheet" href="./assets/alertify/default.min.css">
+  <link rel="shortcut icon" href="./assets/index/images/favicon.png" />
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
