@@ -1,5 +1,6 @@
 <?php
 require '../config/config.php';
+
 if (empty($_SESSION['username']))
 	header('Location: login.php');
 
@@ -10,8 +11,8 @@ $data = '';
 
 try {
 	if ($_SESSION['role'] == 'agent') {
-		$stmt = $connect->prepare('SELECT * FROM complaints INNER JOIN properties ON complaints.property_id=properties.property_id');
-		$stmt->execute();
+		$stmt = $connect->prepare('SELECT * FROM complaints INNER JOIN properties ON complaints.property_id=properties.property_id WHERE complaints.property_id=:property_id');
+		$stmt->execute([':property_id' => $_SESSION['property_id']]);
 		$data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 } catch (PDOException $e) {

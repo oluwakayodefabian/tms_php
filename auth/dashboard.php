@@ -20,6 +20,12 @@ if ($_SESSION['role'] == 'agent') {
 	$stmt = $connect->prepare('SELECT count(*) as total_num_of_properties FROM properties WHERE admin_id=:admin_id');
 	$stmt->execute([':admin_id' => $_SESSION['admin_id']]);
 	$total_num_of_properties = $stmt->fetch(PDO::FETCH_ASSOC);
+
+	// store property_id in a session
+	$stmt2 = $connect->prepare('SELECT property_id FROM properties WHERE admin_id=:admin_id');
+	$stmt2->execute([':admin_id' => $_SESSION['admin_id']]);
+	$property_id = $stmt2->fetch(PDO::FETCH_ASSOC);
+	$_SESSION['property_id'] = $property_id['property_id'];
 } else if ($_SESSION['role'] == 'super_admin') {
 	// Total number of properties
 	$stmt = $connect->prepare('SELECT count(*) as total_num_of_properties FROM properties');

@@ -34,10 +34,7 @@
                         <div class="form-group row">
                             <div class="col-sm-6 mb-3 mb-sm-0">
                                 <label for="admin_username">Username<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="admin_username" name="admin_username" placeholder="Enter username" value="<?= $username == '' ?  uniqid('username') : $username ?>" />
-                                <small id="usernameHelpBlock" class="form-text text-primary">
-                                    The username above was generated automatically be the system. You can change it to a preferred username of your choice.
-                                </small>
+                                <input type="text" class="form-control" id="admin_username" name="admin_username" placeholder="Enter username" value="<?= $username ?>" />
                             </div>
                             <div class="col-sm-6 mb-3 mb-sm-0">
                                 <label for="admin_email">Email<span class="text-danger">*</span></label>
@@ -51,9 +48,6 @@
                                     <span id="toggle-pwd" title="see password"><i class="fas fa-eye fa-2x"></i></span>
                                     <input type="password" class="form-control form-control-user" id="current-password" placeholder="Enter Password" name="admin_password">
                                 </div>
-                                <small id="passwordHelpBlock" class="form-text text-primary">
-                                    The password above was generated automatically be the system.
-                                </small>
                             </div>
                             <div class="col-sm-6">
                                 <label for="admin">Choose a role for the user<span class="text-danger">*</span></label>
