@@ -44,8 +44,8 @@ if ($_SESSION['role'] == 'super_admin') {
 	$total_agent = $stmt->fetch(PDO::FETCH_ASSOC);
 }
 if ($_SESSION['role'] == 'agent') {
-	$stmt = $connect->prepare('SELECT count(*) as total_complaints FROM complaints');
-	$stmt->execute();
+	$stmt = $connect->prepare('SELECT count(*) as total_complaints FROM complaints WHERE property_id=:property_id');
+	$stmt->execute([':property_id' => $_SESSION['property_id']]);
 	$total_complaints = $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
@@ -168,7 +168,7 @@ if ($_SESSION['role'] == 'agent') {
 				</div>
 				<?php if (isset($_SESSION['role']) && $_SESSION['role'] == 'agent') : ?>
 					<!-- Number of Complaints card -->
-					<!-- <div class="col-xl-3 col-md-6 mb-4">
+					<div class="col-xl-3 col-md-6 mb-4">
 						<div class="card border-left-danger shadow h-100 py-2">
 							<div class="card-body">
 								<div class="row no-gutters align-items-center">
@@ -183,7 +183,7 @@ if ($_SESSION['role'] == 'agent') {
 								</div>
 							</div>
 						</div>
-					</div> -->
+					</div>
 				<?php endif; ?>
 
 			</div>
